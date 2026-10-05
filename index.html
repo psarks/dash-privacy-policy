@@ -16,43 +16,60 @@
 <body>
 
 <h1>Dash Privacy Policy</h1>
-<p class="updated">Last updated: October 4, 2026</p>
+<p class="updated">Last updated: October 5, 2026</p>
 
-<p>Dash ("the App") is a mobile app that helps parents keep track of a child's e-bike, scooter, or other motorized-vehicle rides. This policy explains what information Dash collects, how it's used, and who can see it.</p>
+<p>Dash ("the App") is a mobile app that helps parents keep track of a child's e-bike, scooter, or other motorized-vehicle rides. This policy explains what information Dash collects, how it's used, who can see it, and which other services receive any of it.</p>
 
 <h2>Information We Collect</h2>
 <ul>
-  <li><strong>Account information:</strong> When you create a Dash account, we collect the email address and password you provide. Passwords are never stored in plain text; authentication is handled by Firebase Authentication.</li>
+  <li><strong>Account information:</strong> The email address and password you provide when you create a Dash account, and the parent's first and last name. Passwords are never stored in plain text; authentication is handled by Firebase Authentication.</li>
+  <li><strong>Child profile information:</strong> For each child a parent adds to the family: the child's name, a phone number the parent chooses to save for their own reference, and a color used for their avatar. Dash does not call or text that phone number.</li>
   <li><strong>Location data:</strong> While a ride is in progress, Dash collects precise GPS location (including briefly in the background while the screen is locked) to track the route, measure speed, and provide safety-zone and sign/traffic-light alerts. Location is only collected during an active ride, not continuously in the background at all other times.</li>
-  <li><strong>Family/account data:</strong> Information you enter to set up a family, such as a parent and child profile, ride history, and safety-zone boundaries you define.</li>
+  <li><strong>Ride history and alerts:</strong> For each ride, the route, speeds, start and end times, and any alerts generated: going over the speed limit, leaving or entering a safety zone, and riding through a stop sign, yield sign, or traffic light without slowing down (judged from GPS speed), each with its time and location.</li>
+  <li><strong>Settings you create:</strong> The speed limit, safety zones you define (name, center point, and radius), the child's display name and chosen color, and the optional parent PIN. The PIN is stored with the family's settings so that paired devices share it. It is a convenience lock that keeps a child out of the parent screens, not a substitute for protecting your phone.</li>
+  <li><strong>Pairing code:</strong> A short code that links a child's device and a parent's device to the same family.</li>
+  <li><strong>Missing-sign reports (optional):</strong> If you choose to report a missing stop sign, traffic light, yield sign, or crosswalk, we receive the type of sign, its location (the location of the phone when you tap "Use my current location," rounded to about one meter), the optional note you type, and the time. See "Missing-sign reports" below.</li>
+  <li><strong>Information stored on your device:</strong> Dash keeps some information only on the device, such as which role the phone is set to (child or parent), which child the phone belongs to, the time the app was last used (so it can sign you out after about 30 minutes away), and a local copy of settings, ride history, and alerts.</li>
 </ul>
+<p><strong>What Dash does not collect:</strong> Dash contains no advertising, no third-party analytics or crash-reporting tools, and no tracking across other companies' apps or websites. It does not access your contacts, photos, camera, or microphone.</p>
 
 <h2>How We Use Information</h2>
-<p>We use the information above solely to provide the App's core features: live ride tracking, speed alerts, safety-zone notifications, and ride history for the parent account. We do not sell your data or use it for advertising.</p>
+<p>We use the information above solely to provide the App's core features: live ride tracking, speed alerts, safety-zone notifications, sign and traffic-light checking, and ride history for the parent account. Missing-sign reports are used only to improve the public map data described below. We do not sell your data or use it for advertising.</p>
 
 <h2>How Information Is Shared</h2>
-<p>Ride and location data for a child's account is visible to the linked parent account within the same family, by design. Dash does not share your data with third parties for marketing or advertising purposes. Data is stored using Google Firebase (Authentication and Firestore), which processes data on our behalf under its own security and compliance practices.</p>
+<p>Ride and location data for a child's account is visible to the linked parent account within the same family, by design. Dash does not share your data with third parties for marketing or advertising purposes. The services below receive limited information, only as described:</p>
+<ul>
+  <li><strong>Google Firebase (Authentication and Cloud Firestore):</strong> stores your account and the family data described above on our behalf, under its own security and compliance practices.</li>
+  <li><strong>OpenStreetMap-based map services:</strong> To find stop signs, traffic lights, yield signs, and crosswalks near a ride, Dash sends the approximate area of the ride (a small box of coordinates around the phone) to public OpenStreetMap data servers (the Overpass API, run by overpass-api.de and Kumi Systems). In the optional demo-ride mode in Account Settings, Dash also asks a public bike-routing service (routing.openstreetmap.de) for a route near the phone. These servers receive those coordinates and, as with any internet request, the device's IP address. No account, name, or family information is sent to them.</li>
+  <li><strong>Apple:</strong> Dash shows maps using Apple Maps, and turns coordinates into street names (for example in alerts) using Apple's location services on your device. Apple's own privacy policy applies to that.</li>
+  <li><strong>Missing-sign reports:</strong> A report contains no account information. We may use the sign type and location from a report to add the sign to OpenStreetMap, a public map. Only the sign and its location are added, never anything about you.</li>
+</ul>
+
+<h2>Missing-sign reports</h2>
+<p>Reporting is optional. Nothing about your account, name, family, email, rides, or child is sent with a report, and the location is the spot you were standing at when you tapped the button, not a ride route. Because a report is not tied to your account, it is not removed when you delete your account, and we cannot tell which reports are yours. If you want a report removed, email us with the approximate location, date, and sign type, and we will delete it.</p>
 
 <h2>Data Retention</h2>
-<p>We retain account and ride data for as long as your account remains active. You can delete your account and all associated data at any time inside the app (Parent Account &amp; PIN, then Delete account), or by contacting us (see below). Deleting your account permanently removes it from our servers and from your device.</p>
+<p>We retain account and ride data for as long as your account remains active. You can delete your account and all associated data at any time inside the app (Parent Account &amp; PIN, then Delete account), or by contacting us (see below). Deleting your account permanently removes your login, your parent and child profile information, and your family's settings, ride history, alerts, and pairing data from our servers, and clears the data from your device. Missing-sign reports are the one exception, as explained above.</p>
 
 <h2>Children's Privacy</h2>
-<p>Dash is designed to be used by a family unit: a parent creates and manages the family account, and a child's ride data is visible to that parent. We do not knowingly collect personal information from a child independent of a parent-managed family account. If you are a parent and believe your child has provided information outside of this context, please contact us so we can address it.</p>
+<p>Dash is designed to be used by a family unit: a parent creates and manages the family account, and a child's ride data is visible to that parent. Children do not create their own accounts. We do not knowingly collect personal information from a child independent of a parent-managed family account. If you are a parent and believe your child has provided information outside of this context, please contact us so we can address it.</p>
 
-<h2>Your Choices</h2>
+<h2>Your Choices and Rights</h2>
 <ul>
-  <li>Location access can be turned off at any time in your device's system settings, though this will prevent ride tracking from functioning.</li>
+  <li>Location access can be turned off at any time in your device's system settings, though this will prevent ride tracking from functioning. You can also limit it to "While Using the App."</li>
+  <li>You can edit the parent and child information, safety zones, and speed limit in the app at any time.</li>
   <li>You can delete your account and all associated data directly in the app (Parent Account &amp; PIN, then Delete account), or by contacting us at the email below.</li>
+  <li>You can ask us what information we hold about you, or ask for a correction, by contacting us at the email below.</li>
 </ul>
 
 <h2>Security</h2>
-<p>We use industry-standard practices, including Firebase's built-in authentication and database security rules, to protect your information. No method of transmission or storage is 100% secure, but we work to protect your data appropriately.</p>
+<p>We use industry-standard practices, including Firebase's built-in authentication and database security rules, to protect your information. Data is sent over encrypted connections. Dash also signs you out automatically after about 30 minutes away from the app. No method of transmission or storage is 100% secure, but we work to protect your data appropriately.</p>
 
 <h2>Changes to This Policy</h2>
 <p>We may update this policy from time to time. Changes will be posted on this page with an updated "Last updated" date.</p>
 
 <h2>Contact Us</h2>
-<p>If you have questions about this policy or want to request data deletion, contact us at: <a href="mailto:paulinaalesarquis@gmail.com">paulinaalesarquis@gmail.com</a></p>
+<p>If you have questions about this policy, want to request a copy, correction, or deletion of your data, or want a missing-sign report removed, contact us at: <a href="mailto:paulinaalesarquis@gmail.com">paulinaalesarquis@gmail.com</a></p>
 
 </body>
 </html>
